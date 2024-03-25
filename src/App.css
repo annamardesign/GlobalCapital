@@ -555,7 +555,7 @@ article h2 {
   .article figcaption {
     display: flex;
     flex-wrap: wrap;
-    max-width: 9tw0vw;
+    max-width: 90vw;
     align-self: center;
     justify-self: center;
   }
