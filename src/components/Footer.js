@@ -8,15 +8,17 @@ function Footer() {
   return (
     <div className='footer'>
       <nav className='footer__nav'>
+        <img src={logo} className='social__logo--two' alt='logo' />
         <div className='footer__column'>
-          <img src={logo} className='social__logo' alt='logo' />
-          <div className='social__container'>
+          <img src={logo} className='social__logo--one' alt='logo' />
+          <div className='social__container--one'>
             Follow us on: &nbsp;{' '}
             <img src={facebook} className='social' alt='facebook' />{' '}
             <img src={linkedin} className='social' alt='linkedin' />
             <img src={twitter} className='social' alt='twitter' />
           </div>
         </div>
+
         <div className='footer__column'>
           <h3>About</h3>
           <li>About us</li>
@@ -53,6 +55,12 @@ function Footer() {
           <li>GlobalCapital Events</li>
         </div>
       </nav>
+      <div className='social__container--two'>
+        Follow us on: &nbsp;{' '}
+        <img src={facebook} className='social' alt='facebook' />{' '}
+        <img src={linkedin} className='social' alt='linkedin' />
+        <img src={twitter} className='social' alt='twitter' />
+      </div>
       <div className='footer__disclaimer'>
         <p>
           Insurance Insider is part of the Delinian Group, Delinian Limited, 4

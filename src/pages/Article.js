@@ -43,9 +43,9 @@ function Article() {
         <div className='page'>
           <main className='article'>
             <picture className='article__pic'>
-              <source srcset={articleImgSmall} media='(max-width: 600px)' />
+              <source srcSet={articleImgSmall} media='(max-width: 600px)' />
               <img
-                srcset={(articleImgSmall, articleImg)}
+                srcSet={(articleImgSmall, articleImg)}
                 alt='mountain-picks'
               />
             </picture>
