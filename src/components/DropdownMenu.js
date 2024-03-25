@@ -5,9 +5,9 @@ const DropdownMenu = ({ name, menuItems, order }) => {
   const [isOpen, setIsOpen] = useState(false);
   const menu = document.querySelector(`.navigator__main--row-${order}`);
   if (isOpen) {
-    menu.classList.add('stretch');
+    menu?.classList?.add('stretch');
   } else {
-    menu.classList.remove('stretch');
+    menu?.classList?.remove('stretch');
   }
 
   return (

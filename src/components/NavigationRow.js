@@ -2,6 +2,7 @@ import '../App.css';
 import logo from '../logo.svg';
 import search from '../search.svg';
 import DropdownMenu from '../components/DropdownMenu';
+import { Link } from 'react-router-dom';
 
 function NavigationRow({ order }) {
   const dataMenuItems = [
@@ -11,19 +12,17 @@ function NavigationRow({ order }) {
     'Top borrowers',
     'Primary Market Monitor',
   ];
+
   return (
     <section className={`navigator__main--row-${order}`}>
       <nav className='navigator__main__top'>
         <div className='navigator__main__links__top'>
-          <a>Global Capital</a>
-          <a>Securitization</a>
-          <a>Global Markets</a>
+          <Link to='/article'>Global Capital</Link>
+          <Link to=''>Securitization</Link>
+          <Link to=''>Global Markets</Link>
         </div>
         <div className='navigator__main__buttons'>
-          <button className='search'>
-            {' '}
-            <img src={search} className='search-icon' alt='search' />
-          </button>
+          <img src={search} className='search' alt='search' />
           <button className='button button--light'>Pricing</button>
           <button className='button button--grey'>Free Trial</button>
           <button className='button button--outlined'>Login</button>
@@ -35,16 +34,17 @@ function NavigationRow({ order }) {
           {' '}
           <img src={logo} className='logo' alt='logo' />
         </div>
+        <div className='nav-btn'></div>
         <div className='navigator__main__links__bottom'>
-          <a>Markets</a>
-          <a>People and Markets</a>
+          <Link to=''>Markets</Link>
+          <Link to=''>People and Markets</Link>
           <DropdownMenu name={'Data'} menuItems={dataMenuItems} order={order} />
-          <a>Podcasts</a>
-          <a>Special Reports</a>
-          <a>Awards</a>
-          <a>GC Live</a>
-          <a>League Tables</a>
-          <a>The Weekly</a>
+          <Link to=''>Podcasts</Link>
+          <Link to=''>Special Reports</Link>
+          <Link to=''>Awards</Link>
+          <Link to=''>GC Live</Link>
+          <Link to=''>League Tables</Link>
+          <Link to=''>The Weekly</Link>
         </div>
       </nav>
     </section>
