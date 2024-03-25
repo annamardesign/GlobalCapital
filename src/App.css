@@ -1,38 +1,175 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --main-text-color: #333333;
+  --text-color-red: #c43442;
+  --main-bg-light: #f2f8ff;
+  --main-bg-blue: #161829;
+  --main-bg-black: #000;
+  --main-bg-grey: #7d87aa;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--main-text-color);
+  background-color: var(--main-bg-black);
+  font-weight: 600;
+  font-size: 1.6rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.dropdown__danger__toggle {
+  color: var(--text-color-red);
+  cursor: pointer;
+  box-sizing: border-box;
+  filter: brightness(0) saturate(100%) invert(25%) sepia(42%) saturate(3627%)
+    hue-rotate(333deg) brightness(90%) contrast(86%);
+}
+.dropdown__menu::before {
+  display: block;
+  content: '';
+  border-top: 0.3rem solid black;
+  width: 4.5rem;
+  margin-left: 4.5rem;
+  border: 2px solid var(--text-color-red);
+}
+.dropdown__container {
+  position: relative;
+}
+.dropdown__menu {
+  text-align: left;
+  background-color: #ffff;
+  list-style: none;
+  position: absolute;
+  top: 4rem;
+  width: 24rem;
+}
+.dropdown__menu li {
+  margin: 2rem 0.5rem;
+}
+
+.navigator {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr;
+}
+.navigator__main {
+  background-color: #10293d4d;
+}
+.navigator__main--row {
+  margin-top: 2rem;
+}
+.stretch {
+  margin-bottom: 24rem;
+}
+.navigator__main__top {
+  display: grid;
+  height: 5rem;
+  background-color: var(--main-bg-blue);
+  grid-template-columns: repeat(2, 1fr);
+}
+.navigator__main__bottom {
+  display: grid;
+  height: 11rem;
+  background-color: var(--main-bg-light);
+  grid-template-columns: 1fr 3fr;
+}
+.navigator__main__buttons {
+  justify-self: end;
+  margin-right: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.button {
+  height: 3.2rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  border-radius: 0.2rem;
+  border: 0.1rem solid #ffff;
+  padding: 0.4rem 1.2rem;
+}
+.button--outlined {
+  color: #ffff;
+  border-color: #ffff;
+  background-color: var(--main-bg-blue);
+}
+.button--light {
+  background-color: #ffff;
+}
+.button--grey {
+  background-color: var(--main-bg-grey);
+  color: #ffff;
+  border: none;
+}
+.search {
+  border-radius: 50%;
+  border: none;
+  background-color: #ffff;
+  width: 3.2rem;
+  height: 3.2rem;
+}
+.search-icon {
+  margin: 0 auto;
+}
+.navigator__main__links__top {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  margin-left: 2rem;
+  line-height: 2.8rem;
+  font-size: 1.4rem;
+  max-width: 37rem;
+  color: #ffff;
+  position: relative;
+}
+.navigator__main__bottom {
+  display: grid;
+  grid-template-columns: 1fr 11fr;
+  font-weight: 600;
+  height: 6rem;
+  gap: 10rem;
+  align-items: center;
+  cursor: pointer;
+}
+.navigator__main__logo {
+  margin-left: 2rem;
+}
+.navigator__main__links__top::after {
+  content: '';
+  position: absolute;
+  top: 3.7rem;
+  left: 3%;
+  margin-left: -15px;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin: 0px auto;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid var(--main-bg-light);
 }
 
-.App-link {
-  color: #61dafb;
+.navigator__main__links__bottom {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navigator__main__links__bottom a {
+  width: 100%;
 }
