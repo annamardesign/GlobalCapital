@@ -1,9 +1,9 @@
 import '../App.css';
-import arrowLeft from '../arrowLeft.svg';
-import articleImg from '../mountains.png';
-import articleImgSmall from '../mountains_small.png';
-import bookmark from '../bookmark.svg';
-import share from '../share.svg';
+import arrowLeft from '../img/arrowLeft.svg';
+import articleImg from '../img/mountains.png';
+import articleImgSmall from '../img/mountains_small.png';
+import bookmark from '../img/bookmark.svg';
+import share from '../img/share.svg';
 import NavigationRow from '../components/NavigationRow';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';

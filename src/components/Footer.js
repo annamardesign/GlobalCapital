@@ -1,8 +1,8 @@
 import '../App.css';
-import logo from '../logo.svg';
-import facebook from '../facebook.svg';
-import linkedin from '../linkedin.svg';
-import twitter from '../twitter.svg';
+import logo from '../img/logo.svg';
+import facebook from '../img/facebook.svg';
+import linkedin from '../img/linkedin.svg';
+import twitter from '../img/twitter.svg';
 
 function Footer() {
   return (

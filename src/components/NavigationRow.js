@@ -1,6 +1,6 @@
 import '../App.css';
-import logo from '../logo.svg';
-import search from '../search.svg';
+import logo from '../img/logo.svg';
+import search from '../img/search.svg';
 import DropdownMenu from '../components/DropdownMenu';
 import { Link } from 'react-router-dom';
 

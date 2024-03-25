@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import downArrow from '../arrowDown.svg';
+import downArrow from '../img/arrowDown.svg';
 
 const DropdownMenu = ({ name, menuItems, order }) => {
   const [isOpen, setIsOpen] = useState(false);
